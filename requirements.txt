@@ -1,0 +1,19 @@
+# Core dependencies
+numpy
+torch>=2.0.0
+torchvision
+tqdm
+PyYAML
+Pillow
+matplotlib
+opencv-python
+
+# Specialized libraries
+ninja
+imageio
+PyOpenGL
+glfw
+xatlas
+gdown
+git+https://github.com/NVlabs/nvdiffrast
+wandb

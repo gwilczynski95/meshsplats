@@ -1,0 +1,25 @@
+version: 1
+formatters:
+  simple:
+    format: '%(asctime)s - %(levelname)s - %(module)s - %(funcName)s - %(message)s'
+handlers:
+  console:
+    class: logging.StreamHandler
+    formatter: simple
+    level: INFO
+    stream: ext://sys.stdout
+  file_handler:
+    class: logging.FileHandler
+    formatter: simple
+    level: DEBUG
+    # change filename based on the output training directory
+    filename: /path/to/logs/logs.log
+    mode: a
+loggers:
+  my_module:
+    level: DEBUG
+    handlers: [console, file_handler]
+    propagate: no
+root:
+  level: DEBUG
+  handlers: [console, file_handler]
