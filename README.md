@@ -18,14 +18,14 @@ Therefore, you need to install them first.
 
 ## Usage
 
-You can find the scripts for running the experiments in the `sh_scripts` folder.
+You can find the scripts for running the experiments in the `sh_scripts` folder. Remember to change all paths to the correct ones in the scripts. We provided configs for the experiments in the `sh_scripts/configs` folder (once again remember to change the paths).
 
 Each script is designed to run on a single GPU.
 
-To run the experiments, you can use the following command:
+For example, to run the experiments for the DeepBlending dataset with the GaMeS algorithm, you can use the following command:
 
 ```bash
-./sh_scripts/run_games_gs-flat_sh0_tandt.sh
+./sh_scripts/run_games_gs-flat_sh0_db.sh
 ```
 
 ## Datasets
