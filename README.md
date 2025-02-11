@@ -3,11 +3,10 @@
 This repository contains the code for the MeshSplats paper. With our work you can transform 3D or 2D Gaussians into a mesh and benefit from the advantages of both representations!
 
 
-![Lego](https://github.com/user-attachments/assets/f8025d21-83f2-4723-8dd1-06fdce672d72)
-https://github-production-user-asset-6210df.s3.amazonaws.com/47139865/411926772-4867f174-d66a-4f8e-a2ba-a7b32a105cb6.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250211%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250211T103409Z&X-Amz-Expires=300&X-Amz-Signature=e24200dc04b091ee968f4552ab6e332dbfd3328eabc0b02107b6d5b6b4591842&X-Amz-SignedHeaders=host
-![Bicycle](https://github.com/user-attachments/assets/4867f174-d66a-4f8e-a2ba-a7b32a105cb6)
+![Lego](./demo/vis_1.mp4)
+![Bicycle](./demo/vis_bicycle_1.mp4)
 
-Note: You can find this videos in `demo` directory.
+Note: If videos aren't visible you can find them in `demo` directory.
 
 
 ## Installation
