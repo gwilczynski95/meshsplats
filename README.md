@@ -9,8 +9,8 @@ This repository contains the code for the MeshSplats paper. With our work you ca
 <video width="320" height="240" controls>
   <source src="demo/vis_bicycle_1.mp4" type="video/mp4">
 </video> -->
-![Lego](./demo/vis_1.mp4)
-![Bicycle](./demo/vis_bicycle_1.mp4)
+./demo/vis_1.mp4
+./demo/vis_bicycle_1.mp4
 
 Note: You can find this videos in `demo` directory.
 
