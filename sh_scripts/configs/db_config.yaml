@@ -1,0 +1,84 @@
+experiment_name: exp_name
+experiments_dir: /path/to/experiments
+mode: depth  # possible modes:
+
+pseudomesh_path: /path/to/pseudomesh.npz
+device: cuda
+white_background: True
+
+dataset:
+  dataset_path: /path/to/dataset
+  near: 0.01
+  far: 100.
+  imgs_in_ram: True
+  res: 1
+
+dloader:
+  batch_size: 2
+  shuffle: True
+  num_workers: 10
+
+training:
+  epochs: 15
+
+model:
+  optimizable_params: 
+    - vertices
+    - vertex_colors
+  optim_epoch_start:
+    vertices: 0
+
+alpha_pruning:
+  type: alpha  # possible modes: alpha, gradient and both
+  start_epoch: 10
+  epoch_step: 10
+  alpha_eps: 1e-4
+  grad_eps: 1e-7
+  mode: soft  # soft or hard
+
+optimizer:
+  name: adam
+  batch_scal_method: "linear"  # [linear, constant, sqrt]
+  lrs:
+    vertices: 1e-6
+    vertex_colors: 5e-3
+
+lr_scheduler:
+  use: True
+  gamma: 0.999
+
+renderer:
+  depth_steps: 100
+  dp_scheduler:
+    perform: False
+    type: step  # step of exp
+    init_depth_steps: 50
+    # params:  # for exp
+    #   gamma: 0.998
+    params:   # for step
+      steps:
+        0: 50
+        60: 1
+
+loss:  # name of the loss and it's weight
+  ssim: .4
+  img_l1: .6
+  psnr-debug: 0.
+  # pips: 1e1
+  # dice: 1.
+  # delta_xyz: 1e-2
+  # delta_scales: 1e-2
+  # delta_rots: 5e-2
+
+test_loss:
+  ssim: 1.
+  img_l1: 1.
+  psnr: 1.
+  pips: 1.
+
+wandb:
+  use: True
+  key_path: /path/to/wandb.json
+  project_name: project_name
+  entity: entity_name
+  imgs_per_epoch: 2
