@@ -1,6 +1,17 @@
 # MeshSplats
 
-This repository contains the code for the MeshSplats paper.
+This repository contains the code for the MeshSplats paper. With our work you can transform 3D or 2D Gaussians into a mesh and benefit from the advantages of both representations!
+
+
+<video width="320" height="240" controls>
+  <source src="demo/vis_1.mp4" type="video/mp4">
+</video>
+<video width="320" height="240" controls>
+  <source src="demo/vis_bicycle_1.mp4" type="video/mp4">
+</video>
+
+Note: You can find this videos in `demo` directory.
+
 
 ## Installation
 
