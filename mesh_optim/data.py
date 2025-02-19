@@ -141,7 +141,7 @@ class ImageCamDataset(Dataset):
 
             if intr.model=="SIMPLE_PINHOLE":
                 focal_length_x = intr.params[0]
-                focal_length_y = focal_length_y
+                focal_length_y = intr.params[0]
             elif intr.model=="PINHOLE":
                 focal_length_x = intr.params[0]
                 focal_length_y = intr.params[1]
