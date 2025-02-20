@@ -17,6 +17,41 @@ Check out this code if you just want to convert GS to a mesh and benefit from th
 
 Note: If videos aren't visible you can find them in `demo` directory.
 
+## Run our demo in Google Colab!!!
+
+We have prepared for you a demo (to run as quickly as possible) of the MeshSplats method.
+
+### Optimization pipeline demo
+[Here's the Colab!](https://colab.research.google.com/drive/1N6Y6TfijUw9tQ8vrnoLrAhBPlxkSzA2b?usp=sharing)
+
+First of all, all of the data you need is [here](https://drive.google.com/drive/folders/1KjREkxiKRY-_7iDgV9q-5ItTn9rn4vPu?usp=sharing). Download it as it contains full data of one of the experiments we performed (`lego` scene from the `NeRF Synthetic` dataset with white background).
+
+This data structure is as follows:
+
+```
+examples/
+|- lego_white_background/
+|  |- checkpoints/
+|  |  |- best_model
+|  |  |- best_model.npz
+|  |- point_cloud/
+|  |  |- iteration_30000/
+|  |  |- point_cloud.ply
+|  |- pseudomeshes/
+|  |- scene_2.70_pts_8.npz
+|  |- cameras.json
+|  |- config.yaml
+|  |- colab_config.yaml
+|- lego.zip
+```
+Where:
+- `checkpoints` contains the best model from our optimization pipeline as torch checkpoint and numpy checkpoint,
+- `point_cloud` contains the point cloud of the scene from the 30000 iteration of the GaMeS algorithm,
+- `pseudomeshes` contains the raw pseudomesh of the scene generated from the available `point_cloud.ply` file,
+- `cameras.json` contains the camera poses,
+- `config.yaml` contains the config of the experiment.  
+- `colab_config.yaml` contains the config of the experiment for the colab demo,
+- `lego.zip` contains the data of the `lego` scene from the `NeRF Synthetic` dataset.
 ## Installation
 
 ```bash
