@@ -101,24 +101,13 @@ def read_args():
     parser = argparse.ArgumentParser(description="This script accepts ply file and outputs pseudomesh of it")
     parser.add_argument(
         "--ply",
-        # required=True,
-        # default="/home/grzegos/projects/phd/2dgs_nerf_output/hotdog/point_cloud/iteration_10000/point_cloud.ply",
-        # default="/home/grzegos/projects/phd/2dgs_read_output/garden1/point_cloud/iteration_30000/point_cloud.ply",
-        # default="/home/grzegos/projects/phd/games_nerf_output/hotdog_test_fff_sh0/point_cloud/iteration_30000/point_cloud.ply",
-        default="/home/grzegos/projects/phd/pseudomesh_paper/experiments/3dgs_hotdog_test_sh0/point_cloud/iteration_30000/point_cloud.ply",
-        # default="/home/grzegos/projects/phd/surfel_nerf_output/chair_test/point_cloud/iteration_50000/point_cloud.ply",
-        # default="/home/grzegos/projects/phd/games_nerf_output/hotdog_new_test/point_cloud/iteration_1000/point_cloud.ply",
-        # default="/home/grzegos/projects/phd/SuGaR/output/refined_ply/char_sh0/sugarfine_3Dgs7000_sdfestim02_sdfnorm02_level03_decim1000000_normalconsistency01_gaussperface1.ply",
+        required=True,
         type=str,
         help="Path to the ply file"
     )
     parser.add_argument(
         "--algorithm",
-        # default="games",
         default="3dgs",
-        # default="surfels",
-        # default="games",
-        # default="sugar3d",
         type=str,
         choices=["2dgs", "games", "surfels", "sugar2d", "sugar3d", "3dgs"]
     )
